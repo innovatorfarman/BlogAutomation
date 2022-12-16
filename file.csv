@@ -1,0 +1,127 @@
+,Website,Message/Update
+0,netbizzz.com,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//button[text()=""Login""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+1,no1friend.com,"Message: unknown error: net::ERR_CONNECTION_CLOSED
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]
+	(No symbol) [0x00D1D04D]
+	(No sym"
+2,www.stunxt.com/signin,"Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]
+	(No symbol) [0x00D1D04D]
+	(No "
+3,troocker.com,"Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]
+	(No symbol) [0x00D1D04D]
+	(No sym"
+4,dononymous.com,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+5,uconnect.ae,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No "
+6,ebeel.com,"Message: unknown error: net::ERR_CONNECTION_CLOSED
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]
+	(No symbol) [0x00D1D04D]
+	(No sym"
+7,extelicast.com,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+8,iroot.world,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+9,hasster.com,"Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]
+	(No symbol) [0x00D1D04D]
+	(No sym"
+10,joyrulez.com,"Message: element not interactable: [object HTMLInputElement] has no size and location
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]"
+11,selfieoo.com,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No "
+12,chatabox.io,"Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]
+	(No symbol) [0x00D1D04D]
+	(No "
+13,connect.bestzia.com,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+14,bitdle.com,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+15,9020club.com,"Message: element not interactable: [object HTMLInputElement] has no size and location
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No symbol) [0x00E27FD1]"
+16,expressafrica.et,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	(No "
+17,ngage.cloud,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("
+18,connect.lankung.com,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.124)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E9F243]
+	("

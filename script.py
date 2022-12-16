@@ -16,7 +16,7 @@ def AutoPost():
 
     Message = []
     websites =[]
-    for i in range(len(df)):
+    for i in range(1,20):
         try:
             url = 'https://' + df.url[i] + '/'
             websites.append(df.url[i])
