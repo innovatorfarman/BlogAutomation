@@ -16,7 +16,7 @@ def AutoPost():
 
     Message = []
     websites =[]
-    for i in range(len(df)):
+    for i in range(187,188):
         try:
             url = 'https://' + df.url[i] + '/'
             websites.append(df.url[i])
@@ -42,7 +42,7 @@ def AutoPost():
             blog_title = driver.find_element(By.XPATH,'//*[@id="blog_title"]') #.send_keys('This is an awesome blog title')
             blog_desc = driver.find_element(By.XPATH,'//*[@id="new-blog-desc"]') #.send_keys('This is an awesome blog description')
             blog_content = driver.find_element(By.XPATH,'//*[@name="blog_content"]')
-            img_div = driver.find_element(By.XPATH,'//div[@data-block="thumdrop-zone"]')
+            # img_div = driver.find_element(By.XPATH,'//div[@data-block="thumdrop-zone"]')
             blog_image = driver.find_element(By.XPATH,"//input[@type='file']").send_keys('C://Users/farma/Downloads/light.jpg')
             blog_tag = driver.find_element(By.CLASS_NAME,'bootstrap-tagsinput')
             publish_btn = driver.find_element(By.XPATH, '//button[text()="Publish"]')
