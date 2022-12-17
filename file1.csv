@@ -37,3 +37,42 @@ Backtrace:
 	("
 8,https://www.hypebunch.com/,https://www.hypebunch.com/read-blog/3718
 9,https://waoop.com/,https://waoop.com/read-blog/36379
+10,https://www.weenbo.com/,https://www.weenbo.com/create-blog/
+11,https://www.americanwomenorg.com/,"Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No symbol) [0x00E17FD1]
+	(No symbol) [0x00D0D04D]
+	(No "
+12,https://sissycrush.com/,https://sissycrush.com/read-blog/130081
+13,https://sharingfield.com/,https://sharingfield.com/create-blog/
+14,https://wo.barataa.com/,https://wo.barataa.com/read-blog/87330
+15,https://www.mixinpeople.co.za/,https://www.mixinpeople.co.za/create-blog/
+16,https://kansabook.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""insert-blog""]/div[3]/button""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x"
+17,https://eyeball.blog/,https://eyeball.blog/create-blog/
+18,https://scrolllink.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No "
+19,https://makenix.com/,https://makenix.com/read-blog/12050
+20,https://www.kuettu.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No "
+21,https://thelittlenet.com/,https://thelittlenet.com/create-blog/
+22,https://www.ekcochat.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No "

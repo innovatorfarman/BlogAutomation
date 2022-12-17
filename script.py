@@ -144,7 +144,7 @@ def AutoPost():
 
         res = {"Website": websites,"Message/Update":Message}
         res_df = pd.DataFrame(res)
-        res_df.to_csv(f'file1.csv')
+        res_df.to_csv(f'file.csv')
 
 if __name__ == "__main__":
     AutoPost()
