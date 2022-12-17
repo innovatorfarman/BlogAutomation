@@ -1,2 +1,39 @@
 ,Website,Message/Update
-0,https://www.easyfie.com/login,https://www.easyfie.com/create-blog/
+0,https://gaming-walker.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""insert-blog""]/div[3]/button""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x"
+1,https://ussv.club/,https://ussv.club/create-blog/
+2,https://artienz.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No "
+3,https://www.plingue.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No "
+4,https://spieslike.me/,https://spieslike.me/create-blog/
+5,https://selfieoo.com/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""blog_title""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	(No "
+6,https://www.sdssocial.world/,"Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//*[@id=""insert-blog""]/div[3]/button""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x"
+7,https://pharmatalk.org/,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":""[name=""username""]""}
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00E8F243]
+	("
+8,https://www.hypebunch.com/,https://www.hypebunch.com/read-blog/3718
+9,https://waoop.com/,https://waoop.com/read-blog/36379

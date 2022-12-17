@@ -13,19 +13,19 @@ driver.maximize_window()
 # path = 'C:\\Users\farma\Downloads\chromedriver'
 # driver = webdriver.Chrome(path)
 def AutoPost():
-    df = pd.read_excel('new.xlsx')
+    df = pd.read_excel('a.xlsx')
     title = "Quis autem vel eum iure reprehenderit"
     description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
     content ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 
     Message = []
     websites =[]
-    for i in range(0,1):
+    for i in range(28,len(df)):
         try:
             url = df.url[i]
             websites.append(df.url[i])
             driver.get(url)
-            time.sleep(5)
+            driver.implicitly_wait(15)
             #loggin
             username = driver.find_element(By.NAME,'username')
             password = driver.find_element(By.NAME,'password')
@@ -33,15 +33,13 @@ def AutoPost():
                 login = driver.find_element(By.XPATH, '//button[text()="Login"]')
             except:
                 login = driver.find_element(By.XPATH, '//div[contains(@class,"login")]//button[@type="submit"]')
-
+            time.sleep(1)
             action = ActionChains(driver)
             action.click(username).perform()
             action.send_keys(df.User[i]).perform()
             time.sleep(0.5)
             action.click(password).perform()
             action.send_keys(df.Password[i]).perform()
-            # action.send_keys_to_element(username,df.User[i]).perform()
-            # action.send_keys_to_element(password,df.Password[i]).perform()
             time.sleep(0.5)
             action.click(login).perform()
             time.sleep(10)
@@ -51,9 +49,6 @@ def AutoPost():
             driver.get(post_url)
             time.sleep(5)
 
-            # blog_title = driver.find_element(By.XPATH,'//*[@id="blog_title"]')
-            # blog_desc = driver.find_element(By.XPATH,'//*[@id="new-blog-desc"]')
-
             action = ActionChains(driver)
             blog_title = driver.find_element(By.XPATH,'//*[@id="blog_title"]') #.send_keys('This is an awesome blog title')
             blog_desc=""
@@ -61,9 +56,7 @@ def AutoPost():
                 blog_desc = driver.find_element(By.XPATH,'//*[@id="new-blog-desc"]') #.send_keys('This is an awesome blog description')
             except:
                 print("No Description")
-                description=''
            
-            # img_div = driver.find_element(By.XPATH,'//div[@data-block="thumdrop-zone"]')
             blog_image = driver.find_element(By.XPATH,"//input[@type='file']").send_keys('C://Users/farma/Downloads/light.jpg')
             blog_tag = driver.find_element(By.CLASS_NAME,'bootstrap-tagsinput')
 
@@ -88,40 +81,59 @@ def AutoPost():
             except:
                 driver.find_element(By.ID,'blog_ifr').click()
                 action.send_keys(content).perform()
+
                 # try:
                 #     publish_btn =driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button') 
                 # except:
                 #     publish_btn =driver.find_element(By.XPATH, '//button[contains(text(),"Publish")]') 
-            action = ActionChains(driver)
-            try:
-                publish_btn = driver.find_element(By.XPATH, '//button[text()="Publish"]')
-                # driver.find_element(By.XPATH, '//button[text()="Publish"]').click()
-                action.click(publish_btn)
-                time.sleep(12)
-                url = driver.current_url
-            except:
-                publish_btn =driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button') 
-                # driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button').click()
-                action.click(publish_btn)
-                time.sleep(12)
-                url = driver.current_url
-                try:
-                    publish_btn =driver.find_element(By.XPATH, '//button[contains(text(),"Publish")]') 
-                    # driver.find_element(By.XPATH, '//button[contains(text(),"Publish")]').click()
-                    action.click(publish_btn)
-                    time.sleep(12)
-                    url = driver.current_url
-                except:
-                    # driver.find_element(By.XPATH,'//button[@class="btn btn-main setting-panel-mdbtn"]')
-                    publish_btn = driver.find_element(By.XPATH,'//button[@class="btn btn-main setting-panel-mdbtn"]').click()
-                    action.click(publish_btn)
-                    print("Publish Button By Class Name")
-                    time.sleep(12)
-                    url = driver.current_url
+            # ===== Publish Button =====
+            
+            # action = ActionChains(driver)
+            # try:
+            #     publish_btn = driver.find_element(By.XPATH, '//button[text()="Publish"]')
+            #     # driver.find_element(By.XPATH, '//button[text()="Publish"]').click()
+            #     action.click(publish_btn)
+            #     time.sleep(12)
+            #     url = driver.current_url
+            # except:
+            #     publish_btn =driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button') 
+            #     # driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button').click()
+            #     action.click(publish_btn)
+            #     time.sleep(12)
+            #     url = driver.current_url
+            #     try:
+            #         publish_btn =driver.find_element(By.XPATH, '//button[contains(text(),"Publish")]') 
+            #         # driver.find_element(By.XPATH, '//button[contains(text(),"Publish")]').click()
+            #         action.click(publish_btn)
+            #         time.sleep(12)
+            #         url = driver.current_url
+            #     except:
+            #         # driver.find_element(By.XPATH,'//button[@class="btn btn-main setting-panel-mdbtn"]')
+            #         publish_btn = driver.find_element(By.XPATH,'//button[@class="btn btn-main setting-panel-mdbtn"]').click()
+            #         action.click(publish_btn)
+            #         print("Publish Button By Class Name")
+            #         time.sleep(12)
+            #         url = driver.current_url
             # action= ActionChains(driver)
             # action.click(publish_btn).perform()
             # time.sleep(12)
             # url = driver.current_url
+            action = ActionChains(driver)
+            try:
+                pbtn = driver.find_element(By.CLASS_NAME,'btn btn-main setting-panel-mdbtn')
+            except:
+                print("not found by classname")
+                try:
+                    pbtn =driver.find_element(By.XPATH, '//button[contains(text(),"Publish")]')
+                except:
+                    print("Not by contains publish")
+                    pbtn =driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button') 
+
+            #     if pbtn is None:
+            #         pbtn =driver.find_element(By.XPATH, '//*[@id="insert-blog"]/div[3]/button') 
+            action.click(pbtn).perform()
+            time.sleep(15)
+            url = driver.current_url
             if url:
                 Message.append(f"{url}")
             else:
