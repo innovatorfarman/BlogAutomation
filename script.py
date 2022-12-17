@@ -16,11 +16,11 @@ def AutoPost():
     df = pd.read_excel('a.xlsx')
     title = "Quis autem vel eum iure reprehenderit"
     description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
-    content ="Lorem ipsum dolor <a href='#'>sit</a> amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    content = '<h1>Yi Zeng</h1> <a href="https://google.com">Link</a> Post' # All html inside single quotes
 
     Message = []
     websites =[]
-    for i in range(28,len(df)):
+    for i in range(0,1):
         try:
             url = df.url[i]
             websites.append(df.url[i])
@@ -52,11 +52,12 @@ def AutoPost():
             # Title and description element
             action = ActionChains(driver)
             blog_title = driver.find_element(By.XPATH,'//*[@id="blog_title"]') #.send_keys('This is an awesome blog title')
+            action.send_keys_to_element(blog_title,title).perform()
             blog_desc=""
             try:
                 blog_desc = driver.find_element(By.XPATH,'//*[@id="new-blog-desc"]') #.send_keys('This is an awesome blog description')
             except:
-                print("No Description")
+                description = ' '
            
            #Blog Image
             driver.find_element(By.XPATH,"//input[@type='file']").send_keys('C://Users/farma/Downloads/light.jpg')
@@ -64,7 +65,6 @@ def AutoPost():
             #Blog Tag Element
             blog_tag = driver.find_element(By.CLASS_NAME,'bootstrap-tagsinput')
 
-            action.send_keys_to_element(blog_title,title).perform()
             if blog_desc is not None:
                 action.send_keys_to_element(blog_desc,description).perform()
             
@@ -78,10 +78,15 @@ def AutoPost():
             #Blog Content
             try:
                 blog_content = driver.find_element(By.XPATH,'//*[@name="blog_content"]')
-                action.send_keys_to_element(blog_content,content).perform()  
+                action.click(blog_content).perform()
+                driver.execute_script(f"tinyMCE.activeEditor.setContent('{content}')")
+                 
             except:
-                driver.find_element(By.ID,'blog_ifr').click()
-                action.send_keys(content).perform()
+                # driver.find_element(By.ID,'blog_ifr').click()
+                # action.send_keys(content).perform()
+                cframe = driver.find_element(By.ID,'blog_ifr')
+                action.click(cframe).perform()
+                driver.execute_script(f"tinyMCE.activeEditor.setContent('{content}')")
 
             # ===== Publish Button =====
             action = ActionChains(driver)
@@ -104,12 +109,12 @@ def AutoPost():
             else:
                 Message.append(f"Posted: Link Unavailable")
         except Exception as e:
-            Message.append(str(e)[0:200])
+            Message.append(str(e)[0:150])
 
 
         res = {"Website": websites,"Message/Update":Message}
         res_df = pd.DataFrame(res)
-        res_df.to_csv(f'file.csv')
+        res_df.to_excel('file.xlsx')
 
 if __name__ == "__main__":
     AutoPost()
