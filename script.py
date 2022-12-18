@@ -20,6 +20,7 @@ def AutoPost():
     title = "Quis autem vel eum iure reprehenderit"
     description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
     image = 'C://Users/farma/Downloads/light.jpg'
+    tags = '#Trending'
 
     # All html inside single quotes
     content = '<h1>Yi Zeng</h1> <a href="https://google.com">Link</a> Post' 
@@ -28,7 +29,7 @@ def AutoPost():
     websites =[]
     sites = []
     link = []
-    for i in range(18,19):
+    for i in range(30,31):
         try:
             url = df.url[i]
             websites.append(df.url[i])
@@ -103,7 +104,7 @@ def AutoPost():
                 blog_tag = driver.find_element(By.NAME,'blog_tags')
             #Blog Tag
             action.click(blog_tag).perform()
-            action.send_keys("#Trending").perform()
+            action.send_keys(tags).perform()
 
             #Blog Content
             try:
