@@ -20,7 +20,7 @@ def AutoPost():
 
     Message = []
     websites =[]
-    for i in range(0,1):
+    for i in range(1,2):
         try:
             url = df.url[i]
             websites.append(df.url[i])
