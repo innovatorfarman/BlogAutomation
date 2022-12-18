@@ -19,13 +19,16 @@ def AutoPost():
     df = pd.read_excel('a.xlsx')
     title = "Quis autem vel eum iure reprehenderit"
     description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
-    content = '<h1>Yi Zeng</h1> <a href="https://google.com">Link</a> Post' # All html inside single quotes
+    image = 'C://Users/farma/Downloads/light.jpg'
+
+    # All html inside single quotes
+    content = '<h1>Yi Zeng</h1> <a href="https://google.com">Link</a> Post' 
 
     Message = []
     websites =[]
     sites = []
     link = []
-    for i in range(len(df)):
+    for i in range(18,19):
         try:
             url = df.url[i]
             websites.append(df.url[i])
@@ -83,17 +86,24 @@ def AutoPost():
                 action.send_keys_to_element(blog_desc,description).perform()
 
            #Blog Image
-            driver.find_element(By.XPATH,"//input[@type='file']").send_keys('C://Users/farma/Downloads/light.jpg')
+            driver.find_element(By.XPATH,"//input[@type='file']").send_keys(image)
             
             
             #Blog Category
-            select_cat = Select(driver.find_element(By.ID,'blog_category'))
+            category_element = driver.find_element(By.ID,'blog_category')
+            select_cat = Select(category_element)
             select_cat.select_by_value('2')
 
+            driver.execute_script("arguments[0].scrollIntoView(true);", category_element)
+
             #Blog Tag Element
-            blog_tag = driver.find_element(By.CLASS_NAME,'bootstrap-tagsinput')
+            try:
+                blog_tag = driver.find_element(By.CLASS_NAME,'bootstrap-tagsinput')
+            except:
+                blog_tag = driver.find_element(By.NAME,'blog_tags')
             #Blog Tag
-            action.send_keys_to_element(blog_tag,"#Trending").perform()
+            action.click(blog_tag).perform()
+            action.send_keys("#Trending").perform()
 
             #Blog Content
             try:
