@@ -23,7 +23,9 @@ def AutoPost():
 
     Message = []
     websites =[]
-    for i in range(4,6):
+    sites = []
+    link = []
+    for i in range(len(df)):
         try:
             url = df.url[i]
             websites.append(df.url[i])
@@ -123,8 +125,10 @@ def AutoPost():
             action.click(pbtn).perform()
             time.sleep(30)
             url = driver.current_url
+            sites.append(df.url[i])
             if url:
                 Message.append(f"{url}")
+                link.append(f"Published: {url}")
             else:
                 Message.append(f"Posted: Link Unavailable")
         except Exception as e:
@@ -134,6 +138,9 @@ def AutoPost():
         res = {"Website": websites,"Message/Update":Message}
         res_df = pd.DataFrame(res)
         res_df.to_excel('file.xlsx')
+        report = {"Website":sites,"Url":link}
+        report_df = pd.DataFrame(report)
+        report_df.to_excel("Link_Report.xlsx")
     driver.quit()
 
 if __name__ == "__main__":
